@@ -1,0 +1,21 @@
+{
+  "name": "@qrawl/types",
+  "version": "0.1.0",
+  "description": "Shared TypeScript types for qrawl packages",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+  },
+  "license": "MIT",
+  "publishConfig": { "access": "public" }
+}

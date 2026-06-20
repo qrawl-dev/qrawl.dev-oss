@@ -1,0 +1,38 @@
+{
+  "name": "qrawl-langchain",
+  "version": "0.1.0",
+  "description": "Official qrawl document loader for LangChain — web crawling for RAG pipelines",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+  },
+  "peerDependencies": {
+    "@langchain/core": ">=0.2.0",
+    "langchain": ">=0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "langchain": { "optional": true }
+  },
+  "dependencies": {
+    "@qrawl/types": "workspace:*",
+    "qrawl": "workspace:*"
+  },
+  "devDependencies": {
+    "@langchain/core": "^0.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "license": "MIT",
+  "publishConfig": { "access": "public" },
+  "keywords": ["langchain", "qrawl", "loader", "rag", "document-loader", "web-scraping"]
+}

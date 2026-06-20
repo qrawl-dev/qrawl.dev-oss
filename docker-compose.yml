@@ -1,0 +1,69 @@
+version: '3.9'
+
+# Self-hosted qrawl-core stack
+# This is the open source version — cloud features (PII, ToS scan,
+# JS rendering, managed proxies) are only available at qrawl.dev.
+#
+# Usage:
+#   docker compose up
+#   Then hit http://localhost:3001/health
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      REDIS_URL: redis://redis:6379
+      DATABASE_URL: postgresql://qrawl:qrawl@postgres:5432/qrawl
+      JWT_SECRET: change-me-in-production
+      # No ANTHROPIC_API_KEY needed — ToS scanner is cloud-only
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: qrawl
+      POSTGRES_PASSWORD: qrawl
+      POSTGRES_DB: qrawl
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qrawl"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  redis_data:
+  postgres_data:

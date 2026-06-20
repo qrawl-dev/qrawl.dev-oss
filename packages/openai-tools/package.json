@@ -1,0 +1,37 @@
+{
+  "name": "qrawl-openai-tools",
+  "version": "0.1.0",
+  "description": "qrawl tools for OpenAI Agents SDK, Assistants API, and function calling",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev":   "tsup src/index.ts --format esm,cjs --dts --watch"
+  },
+  "peerDependencies": {
+    "openai": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "openai": { "optional": true }
+  },
+  "dependencies": {
+    "@qrawl/types": "workspace:*",
+    "qrawl": "workspace:*"
+  },
+  "devDependencies": {
+    "openai": "^4.50.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "license": "MIT",
+  "publishConfig": { "access": "public" },
+  "keywords": ["openai", "agents", "function-calling", "qrawl", "web-scraping"]
+}
