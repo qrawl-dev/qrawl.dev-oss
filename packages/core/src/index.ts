@@ -15,7 +15,7 @@
  * ```
  */
 
-import { CrawlOptions, CrawlResult, ScrapeOptions, ScrapeResult, MapOptions, MapResult, SearchOptions, SearchResult, Page } from '@qrawl/types'
+import { CrawlOptions, CrawlResult, ScrapeOptions, ScrapeResult, MapOptions, MapResult, SearchOptions, SearchResult, Page } from '@qrawl-dev/types'
 import { crawl }    from './crawler/index.js'
 import { scrapePage } from './scraper/index.js'
 import { map }     from './utils/map.js'
@@ -118,4 +118,4 @@ export type {
   RobotsResult,
   QrawlError,
   QrawlErrorCode,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'

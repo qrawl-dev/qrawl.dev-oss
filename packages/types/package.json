@@ -1,5 +1,5 @@
 {
-  "name": "@qrawl/types",
+  "name": "@qrawl-dev/types",
   "version": "0.1.0",
   "description": "Shared TypeScript types for qrawl packages",
   "main": "./dist/index.js",

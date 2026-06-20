@@ -1,5 +1,5 @@
 {
-  "name": "qrawl-openai-tools",
+  "name": "@qrawl-dev/openai-tools",
   "version": "0.1.0",
   "description": "qrawl tools for OpenAI Agents SDK, Assistants API, and function calling",
   "main": "./dist/index.js",
@@ -23,7 +23,7 @@
     "openai": { "optional": true }
   },
   "dependencies": {
-    "@qrawl/types": "workspace:*",
+    "@qrawl-dev/types": "workspace:*",
     "qrawl": "workspace:*"
   },
   "devDependencies": {

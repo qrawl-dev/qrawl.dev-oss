@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { QrawlCore } from '../src/index.js'
-import { QrawlError } from '@qrawl/types'
+import { QrawlError } from '@qrawl-dev/types'
 
 const mockFetch = vi.fn()
 global.fetch = mockFetch

@@ -1,5 +1,5 @@
 /**
- * qrawl-openai-tools
+ * @qrawl-dev/openai-tools
  *
  * Ready-made tool definitions and handlers for:
  *   - OpenAI Agents SDK (agents-as-tools pattern)
@@ -9,7 +9,7 @@
  * @example OpenAI Agents SDK
  * ```ts
  * import OpenAI from 'openai'
- * import { qrawlTools, executeQrawlTool } from 'qrawl-openai-tools'
+ * import { qrawlTools, executeQrawlTool } from '@qrawl-dev/openai-tools'
  *
  * const openai = new OpenAI()
  *
@@ -23,7 +23,7 @@
  * @example Chat Completions function calling
  * ```ts
  * import OpenAI from 'openai'
- * import { qrawlFunctions, executeQrawlFunction } from 'qrawl-openai-tools'
+ * import { qrawlFunctions, executeQrawlFunction } from '@qrawl-dev/openai-tools'
  *
  * const openai = new OpenAI()
  * const QRAWL_API_KEY = 'qr-YOUR_KEY'

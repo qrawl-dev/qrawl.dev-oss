@@ -33,7 +33,7 @@ import {
   ApiResponse,
   QrawlError,
   Page,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'
 
 const DEFAULT_BASE_URL = 'https://api.qrawl.dev/v1'
 
@@ -273,4 +273,4 @@ export type {
   TosFlag,
   QrawlError,
   QrawlErrorCode,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'

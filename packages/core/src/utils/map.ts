@@ -1,5 +1,5 @@
 import { parse } from 'node-html-parser'
-import { MapOptions, MapResult, QrawlError } from '@qrawl/types'
+import { MapOptions, MapResult, QrawlError } from '@qrawl-dev/types'
 
 /**
  * Discovers all URLs on a domain by:

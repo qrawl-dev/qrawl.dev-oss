@@ -1,5 +1,5 @@
 {
-  "name": "qrawl-langchain",
+  "name": "@qrawl-dev/langchain",
   "version": "0.1.0",
   "description": "Official qrawl document loader for LangChain — web crawling for RAG pipelines",
   "main": "./dist/index.js",
@@ -24,7 +24,7 @@
     "langchain": { "optional": true }
   },
   "dependencies": {
-    "@qrawl/types": "workspace:*",
+    "@qrawl-dev/types": "workspace:*",
     "qrawl": "workspace:*"
   },
   "devDependencies": {

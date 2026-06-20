@@ -6,7 +6,7 @@ import {
   Page,
   SkipReason,
   QrawlError,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'
 import { checkRobots } from '../robots/index.js'
 import { RateLimiter } from '../ratelimiter/index.js'
 import { scrapePage } from '../scraper/index.js'
@@ -113,6 +113,10 @@ export async function crawl(
         // ── Scrape ─────────────────────────────────────────────
         try {
           const page = await scrapePage(url, { format })
+          // Re-check the cap after the async scrape: with concurrency,
+          // several tasks pass the start-of-task guard before any push.
+          // Check + push has no await between them, so it's atomic.
+          if (pages.length >= maxPages) return
           pages.push(page)
           onPage?.(page)
 

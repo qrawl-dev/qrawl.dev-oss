@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────
-// @qrawl/types — single source of truth for the API contract
+// @qrawl-dev/types — single source of truth for the API contract
 // Imported by: qrawl-core, qrawl (SDK), qrawl-cloud (private repo)
 // ─────────────────────────────────────────────────────────────────
 

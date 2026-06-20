@@ -15,7 +15,7 @@ import {
   SearchResult,
   SearchResultItem,
   QrawlError,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'
 import { scrapePage } from '../scraper/index.js'
 import { RateLimiter } from '../ratelimiter/index.js'
 
@@ -76,21 +76,27 @@ export async function search(
 // ── DuckDuckGo HTML scraping ──────────────────────────────────────
 
 async function fetchDdgResults(query: string): Promise<string> {
-  await limiter.wait('html.duckduckgo.com')
+  // RateLimiter.wait expects a full URL (it reads new URL(url).host)
+  await limiter.wait(DDG_URL)
 
   const body = new URLSearchParams({ q: query, b: '', kl: '' })
 
-  const res = await fetch(DDG_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'User-Agent': USER_AGENT,
-      'Accept': 'text/html',
-      'Accept-Language': 'en-US,en;q=0.9',
-    },
-    body: body.toString(),
-    signal: AbortSignal.timeout(12_000),
-  })
+  let res: Response
+  try {
+    res = await fetch(DDG_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': USER_AGENT,
+        'Accept': 'text/html',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      body: body.toString(),
+      signal: AbortSignal.timeout(12_000),
+    })
+  } catch (err) {
+    throw new QrawlError('NETWORK_ERROR', `Search request failed: ${(err as Error).message}`)
+  }
 
   if (!res.ok) {
     throw new QrawlError('NETWORK_ERROR', `Search request failed: HTTP ${res.status}`)

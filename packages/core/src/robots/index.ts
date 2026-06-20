@@ -1,4 +1,4 @@
-import { RobotsResult } from '@qrawl/types'
+import { RobotsResult } from '@qrawl-dev/types'
 
 const cache = new Map<string, { rules: any; fetchedAt: number }>()
 const TTL_MS = 1000 * 60 * 10 // 10 min cache per domain

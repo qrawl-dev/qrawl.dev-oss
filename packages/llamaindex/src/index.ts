@@ -1,5 +1,5 @@
 /**
- * qrawl-llamaindex
+ * @qrawl-dev/llamaindex
  *
  * Provides LlamaIndex.TS integrations:
  *   - QrawlReader:         BaseReader for loading web content as nodes
@@ -7,7 +7,7 @@
  *
  * @example
  * ```ts
- * import { QrawlReader } from 'qrawl-llamaindex'
+ * import { QrawlReader } from '@qrawl-dev/llamaindex'
  * import { VectorStoreIndex } from 'llamaindex'
  *
  * // Load and index an entire docs site
@@ -28,7 +28,7 @@ import type {
   ScrapeOptions,
   SearchOptions,
   Page,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'
 
 // LlamaIndex types — imported as interfaces so we don't need a hard dep at runtime
 export interface LlamaDocument {
@@ -144,7 +144,7 @@ export interface QrawlWebSearchToolOptions {
  * Drop into any LlamaIndex agent:
  * ```ts
  * import { ReActAgent } from 'llamaindex'
- * import { QrawlWebSearchTool } from 'qrawl-llamaindex'
+ * import { QrawlWebSearchTool } from '@qrawl-dev/llamaindex'
  *
  * const agent = new ReActAgent({
  *   tools: [new QrawlWebSearchTool({ apiKey: 'qr-YOUR_KEY' })],

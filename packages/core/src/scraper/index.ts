@@ -1,6 +1,6 @@
 import { parse } from 'node-html-parser'
 import TurndownService from 'turndown'
-import { Page, ScrapeOptions, QrawlError, OutputFormat } from '@qrawl/types'
+import { Page, ScrapeOptions, QrawlError, OutputFormat } from '@qrawl-dev/types'
 
 const td = new TurndownService({
   headingStyle: 'atx',

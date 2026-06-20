@@ -3,7 +3,7 @@ requires      = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name        = "qrawl"
+name        = "qrawl-py"
 version     = "0.1.0"
 description = "Official Python SDK for qrawl.dev — web crawling for AI agents"
 readme      = "README.md"
@@ -29,7 +29,7 @@ dependencies    = [
 [project.optional-dependencies]
 langchain   = ["langchain-core>=0.2.0"]
 llamaindex  = ["llama-index-core>=0.10.0"]
-all         = ["qrawl[langchain,llamaindex]"]
+all         = ["qrawl-py[langchain,llamaindex]"]
 
 [project.urls]
 Homepage      = "https://qrawl.dev"

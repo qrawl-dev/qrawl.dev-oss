@@ -18,7 +18,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@qrawl/types": "workspace:*"
+    "@qrawl-dev/types": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

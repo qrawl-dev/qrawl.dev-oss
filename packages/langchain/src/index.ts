@@ -1,5 +1,5 @@
 /**
- * qrawl-langchain
+ * @qrawl-dev/langchain
  *
  * Provides two LangChain integrations:
  *   - QrawlLoader:     Document loader for crawl/scrape → Document[]
@@ -7,7 +7,7 @@
  *
  * @example
  * ```ts
- * import { QrawlLoader } from 'qrawl-langchain'
+ * import { QrawlLoader } from '@qrawl-dev/langchain'
  * import { ChatOpenAI } from '@langchain/openai'
  * import { RetrievalQAChain } from 'langchain/chains'
  * import { MemoryVectorStore } from 'langchain/vectorstores/memory'
@@ -35,7 +35,7 @@ import type {
   ScrapeOptions,
   SearchOptions,
   Page,
-} from '@qrawl/types'
+} from '@qrawl-dev/types'
 
 // ── QrawlLoader ───────────────────────────────────────────────────
 
@@ -140,7 +140,7 @@ export interface QrawlSearchToolOptions {
  *
  * @example
  * ```ts
- * import { QrawlSearchTool } from 'qrawl-langchain'
+ * import { QrawlSearchTool } from '@qrawl-dev/langchain'
  * import { AgentExecutor, createToolCallingAgent } from 'langchain/agents'
  *
  * const tools = [new QrawlSearchTool({ apiKey: 'qr-YOUR_KEY' })]

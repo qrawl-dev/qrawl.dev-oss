@@ -1,5 +1,5 @@
 {
-  "name": "qrawl-llamaindex",
+  "name": "@qrawl-dev/llamaindex",
   "version": "0.1.0",
   "description": "Official qrawl reader for LlamaIndex.TS — web crawling for RAG",
   "main": "./dist/index.js",
@@ -20,7 +20,7 @@
     "llamaindex": ">=0.3.0"
   },
   "dependencies": {
-    "@qrawl/types": "workspace:*",
+    "@qrawl-dev/types": "workspace:*",
     "qrawl": "workspace:*"
   },
   "devDependencies": {
