@@ -7,14 +7,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev":   "tsup src/index.ts --format esm,cjs --dts --watch"
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "peerDependencies": {
     "llamaindex": ">=0.3.0"
@@ -29,6 +29,28 @@
     "typescript": "^5.4.0"
   },
   "license": "MIT",
-  "publishConfig": { "access": "public" },
-  "keywords": ["llamaindex", "qrawl", "reader", "rag", "web-scraping"]
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "llamaindex",
+    "qrawl",
+    "reader",
+    "rag",
+    "web-scraping"
+  ],
+  "author": "Abdul Qayyum",
+  "homepage": "https://qrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrawl-dev/qrawl.git",
+    "directory": "packages/llamaindex"
+  },
+  "bugs": {
+    "url": "https://github.com/qrawl-dev/qrawl/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }

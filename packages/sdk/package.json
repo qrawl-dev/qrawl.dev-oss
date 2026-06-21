@@ -7,9 +7,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -26,6 +26,28 @@
     "vitest": "^1.6.0"
   },
   "license": "MIT",
-  "publishConfig": { "access": "public" },
-  "keywords": ["qrawl", "web-crawler", "scraper", "ai-agents", "cloud"]
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "qrawl",
+    "web-crawler",
+    "scraper",
+    "ai-agents",
+    "cloud"
+  ],
+  "author": "Abdul Qayyum",
+  "homepage": "https://qrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrawl-dev/qrawl.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/qrawl-dev/qrawl/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }

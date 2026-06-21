@@ -10,28 +10,51 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types":  "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "scripts": {
     "build": "tsup",
-    "dev":   "tsup --watch",
+    "dev": "tsup --watch",
     "start": "node dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "@qrawl-dev/types":          "workspace:*",
-    "qrawl":                     "workspace:*",
-    "qrawl-core":                "workspace:*",
-    "zod":                       "^3.23.0"
+    "@qrawl-dev/types": "workspace:*",
+    "qrawl": "workspace:*",
+    "qrawl-core": "workspace:*",
+    "zod": "^3.23.0"
   },
   "devDependencies": {
-    "tsup":       "^8.0.0",
+    "tsup": "^8.0.0",
     "typescript": "^5.4.0",
     "@types/node": "^20.0.0"
   },
   "license": "MIT",
-  "publishConfig": { "access": "public" },
-  "keywords": ["mcp", "qrawl", "web-scraping", "claude", "cursor", "ai-agents"]
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "mcp",
+    "qrawl",
+    "web-scraping",
+    "claude",
+    "cursor",
+    "ai-agents"
+  ],
+  "author": "Abdul Qayyum",
+  "homepage": "https://qrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrawl-dev/qrawl.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/qrawl-dev/qrawl/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }

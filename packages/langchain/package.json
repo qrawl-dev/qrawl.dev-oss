@@ -7,9 +7,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -21,7 +21,9 @@
     "langchain": ">=0.2.0"
   },
   "peerDependenciesMeta": {
-    "langchain": { "optional": true }
+    "langchain": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@qrawl-dev/types": "workspace:*",
@@ -33,6 +35,29 @@
     "typescript": "^5.4.0"
   },
   "license": "MIT",
-  "publishConfig": { "access": "public" },
-  "keywords": ["langchain", "qrawl", "loader", "rag", "document-loader", "web-scraping"]
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "langchain",
+    "qrawl",
+    "loader",
+    "rag",
+    "document-loader",
+    "web-scraping"
+  ],
+  "author": "Abdul Qayyum",
+  "homepage": "https://qrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrawl-dev/qrawl.git",
+    "directory": "packages/langchain"
+  },
+  "bugs": {
+    "url": "https://github.com/qrawl-dev/qrawl/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }

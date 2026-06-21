@@ -7,9 +7,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -17,5 +17,21 @@
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "license": "MIT",
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Abdul Qayyum",
+  "homepage": "https://qrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrawl-dev/qrawl.git",
+    "directory": "packages/types"
+  },
+  "bugs": {
+    "url": "https://github.com/qrawl-dev/qrawl/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }
