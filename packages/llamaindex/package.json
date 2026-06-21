@@ -1,6 +1,6 @@
 {
   "name": "@qrawl-dev/llamaindex",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Official qrawl reader for LlamaIndex.TS — web crawling for RAG",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

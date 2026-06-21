@@ -1,6 +1,6 @@
 {
   "name": "qrawl",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Official SDK for the qrawl.dev cloud API",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

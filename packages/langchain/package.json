@@ -1,6 +1,6 @@
 {
   "name": "@qrawl-dev/langchain",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Official qrawl document loader for LangChain — web crawling for RAG pipelines",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

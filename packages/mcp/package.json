@@ -1,6 +1,6 @@
 {
   "name": "qrawl-mcp",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "MCP server for qrawl — connect Claude, Cursor, Windsurf, VS Code to live web data",
   "type": "module",
   "main": "./dist/index.js",

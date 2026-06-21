@@ -1,6 +1,6 @@
 {
   "name": "qrawl-core",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Self-hostable BFS web crawler engine — powers qrawl.dev",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
